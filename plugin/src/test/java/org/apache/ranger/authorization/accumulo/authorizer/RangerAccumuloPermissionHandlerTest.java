@@ -71,8 +71,8 @@ public class RangerAccumuloPermissionHandlerTest {
 
         RangerAccumuloPermissionHandler.accumuloPlugin.setPolicies(adminHasAllPolicies);
 
-        assertTrue(basicRap.hasSystemPermission("admin@EXAMPLE.COM", SystemPermission.GRANT));
-        assertTrue(basicRap.hasSystemPermission("admin/fqdn.server.net@EXAMPLE.COM", SystemPermission.CREATE_TABLE));
+        assertTrue(basicRap.hasSystemPermission("admin@SPYDER.COM", SystemPermission.GRANT));
+        assertTrue(basicRap.hasSystemPermission("admin/fqdn.server.net@SPYDER.COM", SystemPermission.CREATE_TABLE));
         assertTrue(basicRap.hasSystemPermission("admin", SystemPermission.DROP_TABLE));
         assertTrue(basicRap.hasSystemPermission("admin", SystemPermission.ALTER_TABLE));
         assertTrue(basicRap.hasSystemPermission("admin", SystemPermission.CREATE_USER));
@@ -226,7 +226,7 @@ public class RangerAccumuloPermissionHandlerTest {
     public void testAuthToLocal() throws Exception {
 
         RangerAccumuloPermissionHandler.accumuloPlugin.setPolicies(adminHasAllPolicies);
-        System.setProperty("hadoop.security.auth_to_local", "RULE:[1:$1@$0](admin@EXAMPLE.COM)s/.*/admin/");
+        System.setProperty("hadoop.security.auth_to_local", "RULE:[1:$1@$0](admin@SPYDER.COM)s/.*/admin/");
         assertTrue(basicRap.hasNamespacePermission("admin/fqdn.stuff.com@REALM.COM", "testNamespace", NamespacePermission.READ));
     }
 

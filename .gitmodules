@@ -1,0 +1,6 @@
+[submodule "docker-hdp"]
+	path = docker-hdp
+	url = https://github.com/Spydernaz/docker-hdp
+[submodule "docker-kerberos"]
+	path = docker-kerberos
+	url = https://github.com/Spydernaz/docker-kerberos

@@ -36,7 +36,7 @@ From rangerAdmin directory (where ./start.sh was executed) can execute:
 
 ./ashell.sh doctorbob
 
-to open an accumulo shell within the dn0 container as the Kerberos principal doctorbob@EXAMPLE.COM
+to open an accumulo shell within the dn0 container as the Kerberos principal doctorbob@SPYDER.COM
 
 This also works for tom, jane, and accumulo
 

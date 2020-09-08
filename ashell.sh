@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$1" == "accumulo" ]; then
-	docker exec -it compose_dn0.dev_1 sh -c "kinit -kt /etc/security/keytabs/accumulo.headless.keytab accumulo-dev@EXAMPLE.COM;accumulo shell"
+	docker exec -it compose_dn0.dev_1 sh -c "kinit -kt /etc/security/keytabs/accumulo.headless.keytab accumulo-dev@SPYDER.COM;accumulo shell"
 
 else
 
